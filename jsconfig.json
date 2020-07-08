@@ -1,5 +1,5 @@
 {
-    "compailerOptions" : {
+    "compilerOptions" : {
         "baseUrl" : "src"
     },
     "include" : ["src/**/*"]
