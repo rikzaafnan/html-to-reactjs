@@ -9,7 +9,7 @@ import FeatureTileIcon03 from 'assets/images/feature-tile-icon-03.svg'
 
 import Fade from 'react-reveal/Fade'
 
-export default function FeaturesTiles() {
+export default function FeaturesTiles(props) {
     return (
         <Section className="features-tiles">
             <div className="container">

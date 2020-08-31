@@ -6,9 +6,36 @@ import Header from 'parts/Header'
 
 import Clients from 'parts/Clients'
 
-import FeaturesTiles from 'parts/FeaturesTiles'
+// import FeaturesTiles from 'parts/FeaturesTiles'
+import Feature from 'parts/Feature'
 
 import HeroImage from 'assets/images/hero-image.png'
+
+import FeatureTileIcon01 from 'assets/images/feature-tile-icon-01.svg'
+import FeatureTileIcon02 from 'assets/images/feature-tile-icon-02.svg'
+import FeatureTileIcon03 from 'assets/images/feature-tile-icon-03.svg'
+
+const features = [
+	{
+		imgSrc:FeatureTileIcon01,
+		imgAlt:"Feature tile icon 01",
+		title: "Join the system",
+		description: "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design."
+	},
+	{
+		imgSrc:FeatureTileIcon02,
+		imgAlt:"Feature tile icon 02",
+		title: "Join the system",
+		description: "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design."
+	},
+	{
+		imgSrc:FeatureTileIcon03,
+		imgAlt:"Feature tile icon 03",
+		title: "Join the system",
+		description: "A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design."
+	},
+
+]
 
 export default function Homepage() {
     return (
@@ -60,10 +87,52 @@ export default function Homepage() {
 						</div>
 					</div>
                 </Section>
-				<Clients>
+				<Clients></Clients>
+				<Section className="features-tiles">
+            		<div className="container">
+                		<div className="features-tiles-inner section-inner">
+                    		<div className="tiles-wrap">
+								{
+									features.map((feature, index) => 
 
-				</Clients>
-				<FeaturesTiles/>
+										// console.log(feature, index)
+										<Feature 
+											key={index}
+											delayInMS={index*500}
+											data={feature}
+										>
+										</Feature>
+									)
+								}
+							</div>
+						</div>
+					</div>
+				</Section>
+				<Section className="pricing">
+					<div class="container">
+						<div
+							className="pricing-inner section-inner has-top-divider"
+						>
+							<div className="section-header center-content">
+								<div className="container-xs">
+									<h2 className="mt-0 mb-16">
+										Simple, transarent pricing
+									</h2>
+									<p className="m-0">
+										Lorem ipsum is common placeholder text
+										used to demonstrate the graphic elements
+										of a document or visual presentation.
+									</p>
+								</div>
+							</div>
+							<div className="tiles-wrap">
+
+							</div>
+						</div>
+					</div>
+
+				</Section>
+				{/* <FeaturesTiles/> */}
 				
             </main>
         </div>
